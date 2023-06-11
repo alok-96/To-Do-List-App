@@ -26,7 +26,7 @@ body{
 }
 
 .container{
-    width: 50vw;
+    width: 80vw;
     margin: auto;
 }
 
@@ -78,6 +78,7 @@ h1{
 .task-list{
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 7px;
 }
 
 #tasks{
@@ -101,7 +102,9 @@ h1{
     border: 0;
     color: var(--grey);
     font-size: 1.2rem;
-    width: 250%;
+    width: 100%;
+    overflow:hidden;
+    flex-basis: 80%;
 }
 
 .actions{
@@ -114,7 +117,7 @@ h1{
 
 @media screen and (max-width: 1000px) {
     .container{
-        width: 70vw;
+        width: 90vw;
     }   
 }
 @media screen and (max-width: 700px) {
@@ -128,5 +131,37 @@ h1{
         flex-direction: column;
         gap: 30px;
         margin: 0;
+    }
+
+    .task{
+        padding: 5px 10px;
+    }
+
+    #new-task-input {
+        padding: 10px 10px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .task{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1{
+        font-size: 1.5rem;
+    }
+
+    #new-task-input,
+    .btn,
+    .content input{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
     }
 }

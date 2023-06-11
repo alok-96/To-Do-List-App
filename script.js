@@ -4,7 +4,7 @@ const form = document.querySelector(".task-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault(); //By default form sends data to another page
-  const task = inputBox.value.trim(); // trim() => to remove whitespaces 
+  const task = inputBox.value.trim(); // trim() => to remove whitespaces
 
   if (task === "") {
     alert("You must write something.");
@@ -23,8 +23,9 @@ form.addEventListener("submit", (e) => {
   taskElement.appendChild(taskContentElement);
 
   const taskInputElement = document.createElement("input");
-  taskInputElement.type = "text";
+  taskInputElement.type = "textarea";
   taskInputElement.value = task;
+  taskInputElement.style.width = taskInputElement.value.length + "ch";
   taskInputElement.setAttribute("readonly", "readonly");
   taskContentElement.appendChild(taskInputElement);
 
